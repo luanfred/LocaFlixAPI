@@ -2,7 +2,7 @@ from .settings_tests import client
 
 def test_create_movie():
     response = client.post(
-        "/movies/",
+        "/filmes/",
         json={
             "title": "The Godfather",
             "director": "Francis Ford Coppola",
@@ -19,7 +19,7 @@ def test_create_movie():
     }
 
 def test_get_movies():
-    response = client.get("/movies/")
+    response = client.get("/filmes/")
 
     assert response.status_code == 200
     assert response.json() == [
@@ -32,7 +32,7 @@ def test_get_movies():
     ]
 
 def test_get_movie():
-    response = client.get("/movies/1")
+    response = client.get("/filmes/1")
 
     assert response.status_code == 200
     assert response.json() == {
@@ -44,7 +44,7 @@ def test_get_movie():
 
 def test_update_movie():
     response = client.put(
-        "/movies/1",
+        "/filmes/1",
         json={
             "title": "The Godfather 2",
             "director": "Francis Ford Coppola",
@@ -61,7 +61,7 @@ def test_update_movie():
     }
 
 def test_delete_movie():
-    response = client.delete("/movies/1")
+    response = client.delete("/filmes/1")
 
     assert response.status_code == 204
     assert response.text == ""
