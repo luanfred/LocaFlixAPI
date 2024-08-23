@@ -1,11 +1,8 @@
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
-from dotenv import load_dotenv
-import os
 
-load_dotenv()
-DB_URL = os.getenv("DB_URL")
+DB_URL = "mysql+pymysql://root:123mudar@mysql-db:3306/locadora"
 
 engine = create_engine(DB_URL, echo=True)
 
