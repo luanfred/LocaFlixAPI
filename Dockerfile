@@ -16,4 +16,4 @@ COPY . .
 
 EXPOSE 8000
 
-CMD ["dockerize", "-wait", "tcp://mysql-db:3306", "-timeout", "60s", "sh", "-c", ". venv/bin/activate && python main.py"]
+CMD ["dockerize", "-wait", "tcp://mysql-db:3306", "-timeout", "120s", "sh", "-c", ". venv/bin/activate && python main.py"]
