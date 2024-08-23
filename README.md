@@ -2,7 +2,7 @@
 
 **Introdução**
 
-Este projeto demonstra como criar uma API RESTful utilizando FastAPI para cadastrar filmes, com um banco de dados MySQL para armazenar as informações. 
+Este projeto apresenta uma API RESTful desenvolvida com FastAPI para gerenciar o cadastro de filmes. Utiliza um banco de dados MySQL para armazenar as informações.
 
 **Tecnologias:**
 
