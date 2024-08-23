@@ -19,6 +19,8 @@ services:
       - "8000:8000"
     depends_on:
       - mysql     
+    environment:
+      - DATABASE_URL=mysql+pymysql://root:123mudar@mysql-db:3306/locadora
 
 
 volumes:
